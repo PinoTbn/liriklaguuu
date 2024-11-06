@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 flex items-center justify-center h-screen">
+    <div class="relative inline-block text-left dropdown">
+        <button class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-purple-600 text-sm font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-purple-500">
+            Dropdown
+            <i class="fas fa-chevron-up ml-2"></i>
+        </button>
+        <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <a href="penyanyi_barat_1.html" class="block px-4 py-2 text-sm text-purple-600 hover:bg-gray-100 hover:text-purple-700" role="menuitem">ENGLISH</a>
+                <a href="#" class="block px-4 py-2 text-sm text-purple-600 hover:bg-gray-100 hover:text-purple-700" role="menuitem">INDONESIA</a>
+                <a href="#" class="block px-4 py-2 text-sm text-purple-600 hover:bg-gray-100 hover:text-purple-700" role="menuitem">INTERNATIONAL</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.dropdown').addEventListener('click', function() {
+            const menu = this.querySelector('.dropdown-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
